@@ -8,6 +8,7 @@ export const Background = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
+  z-index: 100;
   align-items: center;
 `
 
@@ -20,8 +21,22 @@ export const ModalWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  z-index: 10;
   border-radius: 10px;
+
+  @media screen and (max-width: 830px) {
+    width: 700px;
+    height: 400px;
+  };
+
+  @media screen and (max-width: 730px) {
+    width: 500px;
+    height: 300px;
+  };
+
+  @media screen and (max-width: 550px) {
+    width: 330px;
+    height: 100px;
+  };
 `
 
 export const ModalImg = styled.img`
@@ -39,10 +54,18 @@ export const ModalContent = styled.div`
   line-height: 1.8;
   color: #141414;
   background-color: #ebf2ff;
+
+  @media screen and (max-width: 550px) {
+    
+  };
 `
 
 export const ModalP = styled.p`
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 550px) {
+    font-size: 12px;
+  };
 `
 
 export const ModalButton = styled.button`
@@ -59,6 +82,10 @@ export const ModalButton = styled.button`
     color: #000;
     background-color: #e9ba23;
   }
+
+  @media screen and (max-width: 550px) {
+    padding: 5px 12px;
+  };
 `
 
 export const CloseModalButton = styled(MdClose)`
@@ -75,8 +102,19 @@ export const CloseModalButton = styled(MdClose)`
   &:hover{
     color: #e9ba23;
   }
+
+  @media screen and (max-width: 550px) {
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+  };
 `
 
 export const ModalH1 = styled.h1`
   font-size: 32px;
+
+  @media screen and (max-width: 550px) {
+    font-size: 14px;
+  };
 `
